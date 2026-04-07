@@ -1,0 +1,45 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.screen {
+    display: none;
+    padding: 20px;
+}
+
+.active {
+    display: block;
+}
+
+/* TARJETAS */
+#results {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* PC: 5 columnas */
+@media (min-width: 768px) {
+    #results {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* MÓVIL: 3 columnas */
+@media (max-width: 767px) {
+    #results {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+}
